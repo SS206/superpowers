@@ -60,7 +60,13 @@ Subagent (general-purpose):
     **Architecture:**
     - Sound design decisions?
     - Reasonable scalability and performance?
-    - Security concerns?
+    - Security concerns? Check the changed code against the patterns in
+      the security-guidance skill (command injection, XSS, unsafe
+      deserialization, crypto/TLS weaknesses, hardcoded secrets).
+    - Privacy: flag as Important any hardcoded user-specific paths (Windows
+      username, machine name, local absolute path) or personal emails
+      introduced by this diff — such values must come from environment
+      variables or placeholders.
     - Integrates cleanly with surrounding code?
 
     **Testing:**
