@@ -114,6 +114,12 @@ Subagent (general-purpose):
     - Are tests comprehensive?
     - Is the test output pristine (no stray warnings or noise)?
 
+    **Privacy:**
+    - Did I hardcode any user-specific path (Windows username, machine
+      name, local absolute path) or personal email in code, tests, or docs?
+      If so, replace with environment variables (e.g. `%LOCALAPPDATA%`,
+      `os.path.expanduser("~")`) or placeholders before reporting.
+
     If you find issues during self-review, fix them now before reporting.
 
     ## After Review Findings

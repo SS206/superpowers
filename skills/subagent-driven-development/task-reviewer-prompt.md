@@ -112,6 +112,16 @@ Subagent (general-purpose):
     unchanged code or spans tasks), report it as a ⚠️ item instead of
     broadening your search.
 
+    ## Privacy Check
+
+    This is a mandatory review dimension. Flag as Important any hardcoded
+    user-specific paths or personal identifiers introduced by this diff:
+    Windows usernames (`C:\Users\<name>\...`), machine names, local absolute
+    project paths, or personal emails. Such values must come from
+    environment variables (e.g. `%LOCALAPPDATA%`, `os.path.expanduser("~")`)
+    or placeholders instead. If the change is clean on this dimension, state
+    "Privacy: clean" in your report.
+
     ## Part 2: Code Quality
 
     **Code quality:**
